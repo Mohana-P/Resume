@@ -1,89 +1,224 @@
-.main-content{
-    width: 90%;
+@import url('https://fonts.gogleapis.com/css?family=poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+body{
+    background: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
     min-height: 1000px;
+    background: #fff;
+    margin: 50px;
     display: grid;
-    grid-template: 1fr / 300px 700px; 
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0,0,0,0,1);
 }
-.left-section{
-    background-color: #242531;
+.profileText{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid white;
 }
-.right-section{
-    background-color:  #f7f7f7;
+.profileText .imgBX{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
 }
-.left-content {
-    padding: 1rem;
+.profileText .imgBX img{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
 }
-.profile-image img {
-    display: block;
-    margin: auto;
-    border: 5px white solid;
-    border-radius: 30%;
-    width: 60%;
-}
-.name{
-   font-size: 1.2rem;
-   font-weight: 700;
-   text-transform: uppercase;
-   text-align: center;
-   letter-spacing: 0.02px; 
-   padding: 0.8rem;
-   color: #fff;
-}
-.designation {
-    font-size: 1rem;
-    text-align: center;
+.profileText h2{
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: 20px;
     text-transform: uppercase;
-    padding-bottom: 0.5rem;
-    color: #fff;
-}
-.description {
-    font-size: 0.75rem;
     text-align: center;
-    padding: 1rem;
-    color: #fff;
+    font-weight: 600;
+    line-height: 1.4em;
 }
-.social-media {
+.profileText h2 span{
+    font-size: 0.8em;
+    font-weight: 300;
+}
+.contactInfo{
+  padding-top: 40px;
+}
+.title{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.contactInfo ul{
+   position: relative;
+}
+.contactInfo ul li{
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+.contactInfo ul li .icon{
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: skyblue;
+}
+.contactInfo ul li span{
+    color: white;
+    font-weight: 300;
+}
+.contactInfo.education li{
+ margin-bottom: 15px;
+}
+.contactInfo.education h5{
+    color: skyblue;
+    font-weight: 500;
+}
+.contactInfo.education h4:nth-child(2){
+    color: white;
+    font-weight: 400;
+}
+.contactInfo.education h4{
+    color: white;
+    font-weight: 200;
+}
+
+.contactInfo.language .percent{
+   position: relative;
+   width: 100%;
+   height: 6px;
+   background: black;
+   display: block;
+   margin-top: 5px;
+}
+.contactInfo.language .percent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: cadetblue;
+}
+
+.container .left_Side{
+    position: relative;
+    background: #003147;
+    padding: 40px;
+}
+.container .right_Side{
+    position: relative;
+    background: #fff;
+    padding: 40px;
+}
+.about{
+    margin-bottom: 50px;
+}
+.about:last-child{
+    margin-bottom: 0;
+}
+.title2{
+    color: darkcyan;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+p{
+    color: #333;
+}
+.about .box{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    margin: 20px 0;
 }
-.social-media li{
+.about .box .year{
+    min-width: 150px;
+}
+.about .box .year h5{
+    text-transform: uppercase;
+    color: blue;
+    font-weight: 600;
+}
+.skills .box{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+}
+.skills .box h4{
+    text-transform: uppercase;
+    color: blue;
+}
+.skills .box .percent{
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: black;
+}
+.skills .box .percent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: skyblue;
+}
+.hobbies ul{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.hobbies ul li{
     list-style: none;
+    color: blue;
+    font-weight: 500;
+    margin: 10px 0;
 }
-.skills .skills-title {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    text-align: center;
-    color: #fff;
-    padding: 1rem 0.5rem 1rem 0.5rem;
+.hobbies ul li .fa{
+    color: rgb(30, 157, 207);
+    font-size: 20px;
+    width: 30px;
 }
-.skill-name {
-    font-size: 0.65rem;
-    font-weight: 0.65rem;
-    text-align: left;
-    color: #fff;
-    padding-bottom: 0.5rem;
+@media (max-width: 1000px){
+  .container{
+      margin: 10px;
+      grid-template-columns: repeat(1,1fr);
+  }
+  .hobbies ul{
+    grid-template-columns: repeat(1,1fr);
+  }
 }
-.skills .progress-bar {
-    border: 1px white solid;
-    height: 4px;
-    background-color: white;
-}
-.right-main-content {
-    padding: 2rem 3rem 2rem 3rem;
-}
-.right-title{
-    text-transform: uppercase;
-    font-size: 1.2rem;
-    font-weight: 700;
-    padding: 0.5rem;
-    letter-spacing: 1px;
-}
-@media (max-width: 674px) {
-    .main-content{
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
-        width: 90%;
-        min-height: 1000px;
+@media (max-width:600px){
+    .about .box{
+        flex-direction: column;
     }
+    .about .box .year{
+        margin-bottom: 5px;
+    }
+    .hobbies ul{
+        grid-template-columns: repeat(1,1fr);
+      }
+      .skills .box{
+          grid-template-columns: repeat(1,1fr);
+      }
 }
